@@ -1,6 +1,8 @@
-{% extends "Students/base.html" %} 
-{% block content %}
+{% extends "students/base.html" %}
 
+{% block title %}Home{% endblock %}
+
+{% block content %}
 
 <section class="hero">
     <div class="hero-content">
@@ -12,19 +14,46 @@
         </h1>
 
         <p>
-            Easily add, edit, search, and manage student records
-            in one place. Keep student information organized
-            and accessible.
+            Easily add, edit, search, and manage student records in one place.
         </p>
 
         <div class="hero-buttons">
-            <a href="{% url 'student_list' %}" class="btn-primary">
-                View Students
-            </a>
+            <a href="{% url 'student_list' %}" class="btn-primary">View Students</a>
+            <a href="{% url 'add_student' %}" class="btn-secondary">Add Student</a>
+        </div>
+    </div>
+</section>
 
-            <a href="{% url 'add_student' %}" class="btn-secondary">
-                Add Student
-            </a>
+
+<section class="quick-actions">
+    <div class="section-heading">
+        <h2>Manage Your Students</h2>
+        <p>Everything you need to manage student records in one place.</p>
+    </div>
+
+    <div class="action-grid">
+        <div class="action-card">
+            <h3>Add Student</h3>
+            <p>Register a new student and save their information.</p>
+            <a href="{% url 'add_student' %}">Add Student →</a>
+        </div>
+
+        <div class="action-card">
+            <h3>View Students</h3>
+            <p>Browse student details and search for records.</p>
+            <a href="{% url 'student_list' %}">View Students →</a>
+        </div>
+
+        <div class="action-card">
+            <h3>Edit Student</h3>
+            <p>Update student names, emails, phone numbers, and courses.</p>
+            <a href="{% url 'student_list' %}">Edit Records →</a>
+        </div>
+
+        <div class="action-card">
+            <h3>Manage Records</h3>
+            <p>Review student information and manage existing records.</p>
+            <a href="{% url 'student_list' %}">Manage Records →</a>
         </div>
     </div>
 </section>

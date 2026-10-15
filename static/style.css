@@ -1,11 +1,11 @@
 /* This is nav section from base.html */
 nav {
-    background-color: #333;
+    background-color: #dbeafe;
     padding: 15px;
 }
 
 nav a {
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 15px;
 }
@@ -42,6 +42,7 @@ tbody tr:hover {
 
 
 /* Home Page Styles */
+
 
 
 .hero {
@@ -115,4 +116,71 @@ tbody tr:hover {
 
 .btn-secondary:hover {
     background: #eff6ff;
+}
+
+
+.quick-actions {
+    padding: 60px 6%;
+    background: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: #172554;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.action-card {
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.action-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.action-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.action-card a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.action-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
 }
