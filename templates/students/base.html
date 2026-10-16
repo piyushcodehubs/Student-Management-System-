@@ -28,7 +28,42 @@
     </div>
 </nav>
 
+{% if messages %}
+    <div class="messages-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
 
-    {% block content %}{% endblock %}
+{% block content %}
+{% endblock %}
+    
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2>Student<span>Hub</span></h2>
+            <p>A simple and efficient way to manage student records.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'student_list' %}">Students</a>
+            <a href="{% url 'add_student' %}">Add Student</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            &copy; {% now "Y" %} StudentHub.
+            Built with Django.
+        </p>
+    </div>
+</footer>
+
 </body>
 </html>

@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
 from django.db.models import Count
+from django.core.paginator import Paginator
 
 # Create your views here.
 # def home(request):
@@ -41,9 +42,9 @@ def contact(request):
 
 
 
+
 def student_list(request):
     query = request.GET.get("q", "").strip()
-
     students = Student.objects.all()
 
     if query:
@@ -53,9 +54,20 @@ def student_list(request):
             Q(course__icontains=query)
         )
 
-    return render(request, "students/student_list.html", {
-        "students": students
-    })
+    total_students = students.count()
+
+    paginator = Paginator(students, 10)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        "students": page_obj,
+        "page_obj": page_obj,
+        "query": query,
+        "total_students": total_students,
+    }
+
+    return render(request, "students/student_list.html", context)
 
 
 
@@ -87,15 +99,13 @@ def add_student(request):
 
     return render(request, "students/add_student.html")
 
-
-
 def delete_student(request, student_id):
     if request.method == "POST":
-        student = Student.objects.get(id=student_id)
+        student = get_object_or_404(Student, id=student_id)
         student.delete()
         messages.success(request, "Student deleted successfully!")
-    return redirect("student_list")
 
+    return redirect("student_list")
 
 
 def edit_student(request, student_id):

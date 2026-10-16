@@ -8,11 +8,15 @@ urlpatterns = [
     path('Services/',views.services,name="services"),
     path("about/",views.about, name="about"),
     path("Contact/",views.contact,name="contact"),
-    path("students/<int:student_id>",views.delete_student, name="delete_student"),
     path(
     "students/edit/<int:student_id>/",
     views.edit_student,
     name="edit_student"),
+    path(
+    "delete/<int:student_id>/",
+    views.delete_student,
+    name="delete_student"
+    ),
 
 ]
 
