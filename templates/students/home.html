@@ -24,6 +24,54 @@
     </div>
 </section>
 
+<section class="dashboard-stats">
+    <div class="stat-card">
+        <h3>Total Students</h3>
+        <p>{{ total_students }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Courses</h3>
+        <p>{{ total_courses }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Recent Enrollments</h3>
+        <p>{{ recent_students|length }}</p>
+    </div>
+</section>
+
+
+<section class="recent-students">
+    <div class="section-heading">
+        <h2>Recently Enrolled Students</h2>
+        <p>Here are the latest students registered in the system.</p>
+    </div>
+
+    <div class="recent-students-list">
+        {% for student in recent_students %}
+            <div class="recent-student-card">
+                <div class="student-info">
+                    <h3>{{ student.full_name }}</h3>
+                    <p>{{ student.email }}</p>
+                </div>
+
+                <span class="student-course">
+                    {{ student.course }}
+                </span>
+            </div>
+        {% empty %}
+            <p class="no-students">
+                No students have been enrolled yet.
+            </p>
+        {% endfor %}
+    </div>
+
+    <div class="recent-students-footer">
+        <a href="{% url 'student_list' %}">View All Students →</a>
+    </div>
+</section>
+
 
 <section class="quick-actions">
     <div class="section-heading">

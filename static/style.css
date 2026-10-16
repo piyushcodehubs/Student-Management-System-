@@ -5,13 +5,14 @@ nav {
 }
 
 nav a {
-    color: black;
+    color: #172554;
     text-decoration: none;
     padding: 15px;
 }
 
 nav a:hover {
-    background-color: #555;
+    text-decoration: underline;
+
 }
 
 
@@ -182,5 +183,175 @@ tbody tr:hover {
 @media (max-width: 650px) {
     .action-grid {
         grid-template-columns: 1fr;
+    }
+}
+/* Dashboard Stats */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 30px 6%;
+    background: #f8fafc;
+}
+
+.stat-card {
+    padding: 24px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    color: #2563eb;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@media (max-width: 650px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Recent Activity */
+
+.recent-students {
+    padding: 50px 6%;
+    background: #ffffff;
+}
+
+.recent-students-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recent-student-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    margin-bottom: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.student-info h3 {
+    margin-bottom: 6px;
+    color: #172554;
+}
+
+.student-info p {
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+.student-course {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.no-students {
+    text-align: center;
+    color: #64748b;
+    padding: 25px;
+}
+
+.recent-students-footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.recent-students-footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.recent-students-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .recent-student-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 6%;
+    background: #0f172a;
+}
+
+.nav-logo {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-logo span {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links .nav-cta {
+    padding: 10px 15px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.nav-links .nav-cta:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 760px) {
+    .main-nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 14px;
     }
 }

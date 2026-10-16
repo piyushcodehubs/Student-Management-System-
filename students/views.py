@@ -4,12 +4,31 @@ from .models import Student
 from django.contrib import messages
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
-
+from django.db.models import Count
 
 # Create your views here.
+# def home(request):
+#   # return HttpResponse("hello")
+#   return render(request,"students/home.html")
+
 def home(request):
-  # return HttpResponse("hello")
-  return render(request,"students/home.html")
+    total_students = Student.objects.count()
+
+    total_courses = Student.objects.values(
+        "course"
+    ).distinct().count()
+
+    recent_students = Student.objects.order_by(
+        "-enrollment_date"
+    )[:5]
+
+    context = {
+        "total_students": total_students,
+        "total_courses": total_courses,
+        "recent_students": recent_students,
+    }
+
+    return render(request, "students/home.html", context)
 
 def services(request):
   return render(request, "students/Services.html")
