@@ -79,25 +79,28 @@ def add_student(request):
         course = request.POST.get("course", "").strip()
 
         if not all([full_name, email, phone, course]):
-            return render(request, "students/add_student.html", {
-                "error": "All fields are required."
-            })
-        if Student.objects.filter(email=email).exists():
-            return render(request, "students/add_student.html", {
-                "error": "This email is already registered."
-            })
+            messages.error(request, "All fields are required.")
+            return redirect("add_student")
 
-        Student.objects.create(
+        if Student.objects.filter(email__iexact=email).exists():
+            messages.error(request, "This email already exists.")
+            return redirect("add_student")
+
+        student = Student(
             full_name=full_name,
             email=email,
             phone=phone,
-            course=course
+            course=course,
         )
-        messages.success(request, "Student added successfully!")
+        student.save()
 
+        messages.success(request, "Student added successfully!")
         return redirect("student_list")
 
     return render(request, "students/add_student.html")
+
+
+
 
 def delete_student(request, student_id):
     if request.method == "POST":

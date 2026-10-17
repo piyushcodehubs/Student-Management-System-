@@ -16,18 +16,23 @@
     <br><br>
 
     <label>Email</label>
-    <input type="email" name="email" required>
+    <input
+    type="email"
+    name="email"
+    id="email"
+    value="{{ request.POST.email|default:'' }}"
+    required
+>
 
     <br><br>
 
     <label>Phone</label>
-    <input type="text" name="phone" required>
+    <input type="tel" name="phone" required>
 
     <br><br>
 
     <label>Course</label>
     <input type="text" name="course" required>
-
     <br><br>
 
     <button type="submit">Add Student</button>
