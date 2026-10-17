@@ -185,6 +185,7 @@ tbody tr:hover {
         grid-template-columns: 1fr;
     }
 }
+
 /* Dashboard Stats */
 
 .dashboard-stats {
@@ -687,3 +688,698 @@ td {
     color: #475569;
     font-weight: 600;
 }
+
+
+
+.add-student-page {
+    padding: 40px 6%;
+    background: #f8fafc;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.form-container h1 {
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+.form-container>p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.field-error {
+    margin-top: 6px;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.form-container .btn-primary,
+.form-container .btn-secondary {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.form-container .btn-secondary {
+    margin-left: 8px;
+}
+
+
+
+/* Add Student Page */
+.add-student-page {
+    padding: 50px 6%;
+    background: #f8fafc;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.form-container h1 {
+    margin: 0 0 10px;
+    color: #172554;
+    font-size: 32px;
+}
+
+.form-container>p {
+    margin-bottom: 28px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #0f172a;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Validation errors */
+.field-error {
+    margin-top: 6px;
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .add-student-page {
+        padding: 25px 5%;
+    }
+
+    .form-container {
+        padding: 22px;
+    }
+
+    .form-container h1 {
+        font-size: 26px;
+    }
+}
+
+
+
+/* ===== Add Student Page ===== */
+
+.add-student-page {
+    padding: 50px 6%;
+    background: #f8fafc;
+    min-height: 70vh;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Heading */
+.form-container h1 {
+    margin: 0 0 10px;
+    color: #172554;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.form-container>p {
+    margin: 0 0 28px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #0f172a;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Validation errors */
+.field-error {
+    margin-top: 7px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.field-error p {
+    margin: 4px 0;
+}
+
+/* Buttons */
+.form-container .btn-primary,
+.form-container .btn-secondary {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.form-container .btn-primary {
+    background: #2563eb;
+    color: #fff;
+    border: 1px solid #2563eb;
+}
+
+.form-container .btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.form-container .btn-secondary {
+    margin-left: 8px;
+    background: #fff;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.form-container .btn-secondary:hover {
+    background: #eff6ff;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .add-student-page {
+        padding: 25px 5%;
+    }
+
+    .form-container {
+        padding: 22px;
+    }
+
+    .form-container h1 {
+        font-size: 26px;
+    }
+
+    .form-container .btn-primary,
+    .form-container .btn-secondary {
+        padding: 11px 16px;
+    }
+}
+
+
+
+/* ===== Add Student Page ===== */
+
+.add-student-page {
+    padding: 50px 6%;
+    background: #f8fafc;
+    min-height: 70vh;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Heading */
+.form-container h1 {
+    margin: 0 0 10px;
+    color: #172554;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.form-container>p {
+    margin: 0 0 28px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #0f172a;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Validation errors */
+.field-error {
+    margin-top: 7px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.field-error p {
+    margin: 4px 0;
+}
+
+/* Buttons */
+.form-container .btn-primary,
+.form-container .btn-secondary {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.form-container .btn-primary {
+    background: #2563eb;
+    color: #fff;
+    border: 1px solid #2563eb;
+}
+
+.form-container .btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.form-container .btn-secondary {
+    margin-left: 8px;
+    background: #fff;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.form-container .btn-secondary:hover {
+    background: #eff6ff;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .add-student-page {
+        padding: 25px 5%;
+    }
+
+    .form-container {
+        padding: 22px;
+    }
+
+    .form-container h1 {
+        font-size: 26px;
+    }
+
+    .form-container .btn-primary,
+    .form-container .btn-secondary {
+        padding: 11px 16px;
+    }
+}
+
+
+
+
+/* Add Student Page */
+.add-student-page {
+    padding: 60px 20px;
+    background: #f1f5f9;
+    min-height: 65vh;
+}
+
+/* Form Card */
+.form-container {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.form-container h1 {
+    margin: 0 0 12px;
+    color: #0f172a;
+    font-size: 32px;
+    font-weight: 750;
+}
+
+.form-container > p {
+    margin: 0 0 30px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Individual fields */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* Validation errors */
+.field-error {
+    margin-top: 7px;
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+.field-error p {
+    margin: 4px 0;
+}
+
+/* Buttons */
+.form-container .btn-primary,
+.form-container .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.form-container .btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+}
+
+.form-container .btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.form-container .btn-secondary {
+    margin-left: 10px;
+    background: #ffffff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.form-container .btn-secondary:hover {
+    background: #eff6ff;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+    .add-student-page {
+        padding: 30px 14px;
+    }
+
+    .form-container {
+        padding: 24px 18px;
+    }
+
+    .form-container h1 {
+        font-size: 27px;
+    }
+
+    .form-container .btn-primary,
+    .form-container .btn-secondary {
+        padding: 11px 15px;
+    }
+
+    .form-container .btn-secondary {
+        margin-left: 4px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add Student form - final overrides */
+body .add-student-page {
+    min-height: 65vh;
+    padding: 50px 20px;
+    background: #f1f5f9;
+}
+
+body .add-student-page .action-btn{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 36px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+body .add-student-page .form-container h1 {
+    margin: 0 0 10px;
+    color: #0f172a;
+    font-size: 32px;
+}
+
+body .add-student-page .form-container > p {
+    margin: 0 0 28px;
+    color: #64748b;
+}
+
+body .add-student-page .form-group {
+    margin-bottom: 20px;
+}
+
+body .add-student-page .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+body .add-student-page .form-group input,
+body .add-student-page .form-group select,
+body .add-student-page .form-group textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    color: #0f172a;
+    font: inherit;
+}
+
+body .add-student-page .form-group input:focus,
+body .add-student-page .form-group select:focus,
+body .add-student-page .form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+body .add-student-page .btn-primary,
+body .add-student-page .btn-secondary {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body .add-student-page .btn-primary {
+    background: #2563eb;
+    color: white;
+    border: 1px solid #2563eb;
+}
+
+body .add-student-page .btn-secondary {
+    margin-left: 8px;
+    background: white;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+@media (max-width: 600px) {
+    body .add-student-page {
+        padding: 28px 14px;
+    }
+
+    body .add-student-page .form-container {
+        padding: 24px 18px;
+    }
+}
+
+
+

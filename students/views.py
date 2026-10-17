@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.db.models import Q
 from django.db.models import Count
 from django.core.paginator import Paginator
+from .forms import StudentForm
 
 # Create your views here.
 # def home(request):
@@ -71,36 +72,51 @@ def student_list(request):
 
 
 
+# def add_student(request):
+#     if request.method == "POST":
+#         full_name = request.POST.get("full_name", "").strip()
+#         email = request.POST.get("email", "").strip()
+#         phone = request.POST.get("phone", "").strip()
+#         course = request.POST.get("course", "").strip()
+
+#         if not all([full_name, email, phone, course]):
+#             messages.error(request, "All fields are required.")
+#             return redirect("add_student")
+
+#         if Student.objects.filter(email__iexact=email).exists():
+#             messages.error(request, "This email already exists.")
+#             return redirect("add_student")
+
+#         student = Student(
+#             full_name=full_name,
+#             email=email,
+#             phone=phone,
+#             course=course,
+#         )
+#         student.save()
+
+#         messages.success(request, "Student added successfully!")
+#         return redirect("student_list")
+
+#     return render(request, "students/add_student.html")
+
+
 def add_student(request):
     if request.method == "POST":
-        full_name = request.POST.get("full_name", "").strip()
-        email = request.POST.get("email", "").strip()
-        phone = request.POST.get("phone", "").strip()
-        course = request.POST.get("course", "").strip()
+        form = StudentForm(request.POST)
 
-        if not all([full_name, email, phone, course]):
-            messages.error(request, "All fields are required.")
-            return redirect("add_student")
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Student added successfully!")
+            return redirect("student_list")
+    else:
+        form = StudentForm()
 
-        if Student.objects.filter(email__iexact=email).exists():
-            messages.error(request, "This email already exists.")
-            return redirect("add_student")
-
-        student = Student(
-            full_name=full_name,
-            email=email,
-            phone=phone,
-            course=course,
-        )
-        student.save()
-
-        messages.success(request, "Student added successfully!")
-        return redirect("student_list")
-
-    return render(request, "students/add_student.html")
-
-
-
+    return render(
+        request,
+        "students/add_student.html",
+        {"form": form}
+    )
 
 def delete_student(request, student_id):
     if request.method == "POST":
